@@ -9,13 +9,15 @@ static const char *fonts[] = {
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
-	[SchemeNorm] = { "#bbbbbb", "#000000" },
-	[SchemeSel] = { "#4db5bd", "#000000" },
+	[SchemeNorm] = { "#f1f4f9", "#262d40" },
+	[SchemeSel] = { "#f1f4f9", "#4950bb" },
 	[SchemeOut] = { "#000000", "#00ffff" },
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
 static unsigned int lines      = 0;
 
+static unsigned int lineheight = 24;
+static unsigned int min_lineheight = 24;
 /*
  * Characters not considered part of a word while deleting words
  * for example: " /?\"&[]"
